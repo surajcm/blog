@@ -1,23 +1,15 @@
-baseurl                 = "https://surajcm.github.io/blog"
-DefaultContentLanguage  = "en"
 title                   = "Explore my world"
-theme                   = "hugo-future-imperfect-slim"
-paginate                = 3
-disqusShortname         = ""
+baseurl                 = "https://surajcm.github.io/blog"
+languageCode            = "en-us"
+theme                   = ["github.com/theNewDynamic/gohugo-theme-ananke"]
+resourceDir             = "../resources"
+DefaultContentLanguage  = "en"
+SectionPagesMenu        = "main"
+Paginate                = 5
 googleAnalytics         = ""
-pluralizeListTitles     = false
-disableLanguages        = []
+enableRobotsTXT         = true
 
-[markup.goldmark.renderer]
-  unsafe                = true
 
-[module]
-  [module.hugoVersion]
-  extended              = true
-  min                   = "0.62.0"
-
-[outputs]
-  home                  = ["html", "json", "rss"]
 
 [params]
   enableCDN             = false

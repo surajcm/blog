@@ -12,6 +12,8 @@ tags = [""]
 +++
 I am planning to refactor a code that is based on Java 7 to Java 8 using the functional components, specifically Collector. The plan is simple: learn it by coding it. Let’s get started…
 
+## Overview of the Java Object We Are Dealing With
+
 
 ***
 
