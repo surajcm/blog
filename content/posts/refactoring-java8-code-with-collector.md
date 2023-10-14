@@ -3,7 +3,6 @@ title: "Refactoring java8 code with collector"
 description: "Hello world to the blogging universe."
 date: "2022-01-18"
 featured_image: "img/2022/01/programming.png"
-draft: "true"
 ---
 I am planning to refactor a code that is based on Java 7 to Java 8 using the functional components, specifically Collector. The plan is simple: learn it by coding it. Let’s get started…
 
