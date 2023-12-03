@@ -1,28 +1,30 @@
 ---
-title: "Refactoring java8 code with collector"
-description: "Hello world to the blogging universe."
+title: "Refactoring Java 8 Code with Collector: A Practical Approach for Seamless Code Flow"
+description: "Having served as a lead technical architect with extensive experience in the Java ecosystem, I've had the privilege of witnessing the transformative potential of effective code refactoring. Today, I extend a warm invitation to embark on a journey delving into the art of refactoring Java 8 code. We'll explore a pragmatic and systematic approach that assures you a smoother code flow, ultimately enhancing your development skills."
 date: "2022-01-18"
 featured_image: "img/2022/01/programming.png"
 ---
-I am planning to refactor a code that is based on Java 7 to Java 8 using the functional components, specifically Collector. The plan is simple: learn it by coding it. Let’s get started…
+In our quest for knowledge, let's begin by structuring our narrative with a clear and organized framework. Let's keep our vessel steady as we navigate through the intricate waters of Java 8 code refactoring.
 
-## Overview of the Java Object We Are Dealing With
+As we progress, we will break down complex ideas into more digestible terms and provide vivid examples to illuminate the path. 
+
+## Understanding the Java Object in Focus
 ![](/blog/img/2022/01/java8-fun.png)
 
-The following code is intend to fetch a few specific data from Company object, where company has a list of employees. I would like to perform the following operations,
+The code below aims to retrieve specific data from a Company object, which includes a list of employees. I aim to execute the following operations:
 
-    Find out the most common name (Employee name) in the company
-    Find the highest salaried employee of the company
-    Find the sum of salaries for all Men
-    Find most popular grade/band in the company
+    Identify the most frequently occurring name among employees.
+    Determine the employee with the highest salary in the company.
+    Calculate the total salary of all male employees.
+    Ascertain the most prevalent grade or band within the company.
 
-Prior to java 8, it is tough to refactor these logic and find out some common parts. But the functional components make the refactoring easy.
-
+Before the advent of Java 8, refactoring these logics and identifying commonalities was challenging. However, leveraging functional components simplifies the refactoring process significantly.
 ___
 ## Pre-Java8 version:
 
-Let’s go through the code,
-### Find out the most common employee name in the company
+Let's delve into the code to accomplish specific tasks:
+
+### Finding the Most Common Employee Name in the Company
 ```java
 private static String findMostRepeatingNameInCompany(Company company) {
     String repeatingName = null;
@@ -46,7 +48,7 @@ private static String findMostRepeatingNameInCompany(Company company) {
     return repeatingName;
 }
 ```
-### Find the highest salaried employee
+### Locating the Employee with the Highest Salary
 ```java
 private static Employee findEmployeeWithHighestSalaryInTheCompany(Company company) {
     Employee costlyEmployee = null;
@@ -65,7 +67,7 @@ private static Employee findEmployeeWithHighestSalaryInTheCompany(Company compan
 }
 ```
 
-### Find the sum of salaries for all Men
+### Calculating the Sum of Salaries for Male Employees
 
 ```java
 private static Long findSumOfAllMenSalary(Company company) {
@@ -81,7 +83,7 @@ private static Long findSumOfAllMenSalary(Company company) {
 }
 ```
 
-### Find most popular grade/band in the company
+### Identifying the Most Popular Grade/Band in the Company
 ```java
 private static Band findMostPopularBandInCompany(Company company) {
     Band popularBand = null;
@@ -106,15 +108,15 @@ private static Band findMostPopularBandInCompany(Company company) {
 }
 ```
 
-In all the cases, we need to iterate through various departments and then employees in it. But since the conditions and the data we want to collect are in a different format, we wont be able to find something common and refactor it properly. Let’s see how java8 deals with this.
+In each scenario, iterating through different departments and their respective employees is necessary. However, due to varying data formats and conditions, finding commonalities for effective refactoring becomes challenging. Let's explore how Java 8 addresses these complexities
 
 ---
 
-As an initial step, lets use streams and do the processing.
+To commence, let's employ streams for data processing.
 
-### Find out the most common employee name in the company
+### Finding the Most Common Employee Name in the Company
 
-Let’s go through the logic of nameAndCount, since the iterations (for loop on department and employee) have a defined result(nameAndCount), we can use streams to get that value
+Let's delve into the logic behind 'nameAndCount'. Considering that the iterations (for loops on departments and employees) yield a specific result represented by 'nameAndCount', we can leverage streams to achieve the same value.
 
 ```java
 company.getDepartments().stream().flatMap(department -> department.getEmployees().stream())
@@ -134,7 +136,7 @@ private static void addToNameAndCountMap(Map<String, Integer> nameAndCount, Empl
 }
 ```
 
-why didn’t we get the result via collect? We have some logic there, we need to identify the duplicates, the value of the map is count of employee names. Let’s see the final results.
+Why didn't we obtain the result using 'collect'? Our logic involves identifying duplicates, where the map's value represents the count of employee names. Now, let's proceed to examine the final results.
 
 ```java
 private static String findMostRepeatingNameInCompany(Company company) {
@@ -164,10 +166,9 @@ private static void addToNameAndCountMap(Map<String, Integer> nameAndCount, Empl
 }
 ```
 
-### Find the highest salaried employee
+### Locating the Employee with the Highest Salary
 
-Let’s do the same refactoring here as well. But here, we can use collect as the logic is fairly less complex.
-
+Let's apply the same refactoring approach in this case. However, here, we can utilize 'collect' since the logic is relatively less complex.
 ```java
 private static Employee findEmployeeWithHighestSalaryInTheCompany(Company company) {
     Employee costlyEmployee = null;
@@ -184,7 +185,7 @@ private static Employee findEmployeeWithHighestSalaryInTheCompany(Company compan
 }
 ```
 
-### Find the sum of salaries for all Men
+### Calculating the Sum of Salaries for Male Employees
 
 Well, this one seems much simpler.
 
@@ -198,7 +199,7 @@ private static Long findSumOfAllMenSalary(Company company) {
 ```
 
 ### Find most popular grade/band in the company
-We need to apply the similar logic as we did for the first method (I mean findMostRepeatingNameInCompany). Let’s try it
+We should apply a similar logic to what was implemented in the first method (findMostRepeatingNameInCompany). Let's attempt it here.
 
 ```java
 private static Band findMostPopularBandInCompany(Company company) {
@@ -228,13 +229,15 @@ private static void addToBandAndCoutMap(Map<Band, Integer> bandAndCount, Employe
 }
 ```
 
-We have some common values, and might be able to save some lines if we find that common things and refactor it properly, lets go with that…
+We have identified some common elements, and there might be an opportunity to condense the code by refactoring these shared aspects. Let's proceed in that direction.
 
 ---
-This time, lets use stream.collect() method everywhere. So we have changes only on 2 method calls findMostRepeatingNameInCompany and findMostPopularBandInCompany
-### Find out the most common employee name in the company
+This time, let's utilize the stream.collect() method across the board. Consequently, we'll focus on making changes only in two method calls: findMostRepeatingNameInCompany and findMostPopularBandInCompany.
 
-Let’s try to use collect here, and avoid addToNameAndCountMap method call, If we use the right collector, we can collect data to a map, with a custom key or value. We are going to use `Collectors.groupingBy(Employee::getName,Collectors.counting())` for this.
+### Finding the Most Common Employee Name in the Company
+
+Let's attempt to employ the collect method here and circumvent the addToNameAndCountMap method call. By leveraging the appropriate collector, we can accumulate data into a map, defining either a custom key or value. We'll utilize 'Collectors.groupingBy(Employee::getName, Collectors.counting())' for this purpose.
+
 
 ```java
 private static String findMostRepeatingNameInCompany(Company company) {
@@ -253,9 +256,10 @@ private static String findMostRepeatingNameInCompany(Company company) {
 }
 ```
 
-### Find most popular grade/band in the company
+### Identifying the Most Popular Grade/Band in the Company
 
-Let’s do the same thing here as well,
+Let's apply the same approach in this case as well.
+
 ```java
 private static Band findMostPopularBandInCompany(Company company) {
     Map<Band, Long> bandAndCount = company.getDepartments().stream()
@@ -272,10 +276,10 @@ private static Band findMostPopularBandInCompany(Company company) {
     return popularBand;
 }
 ```
-Now we have a common pattern, and it seems there are possibilities to extract some functional components out of it. Let’s explore that possibility.
+We've identified a recurring pattern, suggesting potential opportunities to extract functional components. Let's explore the feasibility of this approach.
 
 ---
-We could see that the methods findMostRepeatingNameInCompany, findEmployeeWithHighestSalaryInTheCompany & findMostPopularBandInCompany follows a similar pattern. Only difference is the type of map, and the collector we use. So, lets write a method that returns a generic map, and accept a collector.
+It seems like the methods findMostRepeatingNameInCompany, findEmployeeWithHighestSalaryInTheCompany, and findMostPopularBandInCompany share a similar pattern. The main difference lies in the type of map used and the collector employed. Let's create a method that can generate a generic map and accepts a collector as an argument.
 
 ```java
 private static <T> Map<T, Long> processEmployeeToMap(Company company,
@@ -287,9 +291,9 @@ private static <T> Map<T, Long> processEmployeeToMap(Company company,
 }
 ```
 
-This is a generic method, it works for different inputs, if T is string, it will use the collector to get a Map<String, Long> as return. If we use another object, say Employee, then the return type will be Map<Employee, Long>. Let’s try using this method call in these 3 methods.
+This method is generic and adaptable to various inputs. If T is a string, it will employ the collector to produce a Map<String, Long>. If we use another object, such as Employee, the return type will be Map<Employee, Long>. Let's implement this method call in the three aforementioned methods.
 
-### Find out the most common employee name in the company
+### Finding the Most Common Employee Name in the Company
 ```java
 private static String findMostRepeatingNameInCompany(Company company) {
     Collector<Employee, ?, Map<String, Long>> repeatingNameCollector =
@@ -306,9 +310,9 @@ private static String findMostRepeatingNameInCompany(Company company) {
     return repeatingName;
 }
 ```
-### Find the highest salaried employee
+### Locating the Employee with the Highest Salary
 
-Let’s do the same refactoring here as well,
+Let's apply the same refactoring approach here as well.
 ```java
 private static Employee findEmployeeWithHighestSalaryInTheCompany(Company company) {
     Collector<Employee,?,Map<Employee,Long>> highSalary =
@@ -325,7 +329,7 @@ private static Employee findEmployeeWithHighestSalaryInTheCompany(Company compan
 }
 ```
 
-### Find most popular grade/band in the company
+### Identifying the Most Popular Grade/Band in the Company
 
 ```java
 private static Band findMostPopularBandInCompany(Company company) {
@@ -344,9 +348,9 @@ private static Band findMostPopularBandInCompany(Company company) {
 }
 ```
 
-### Find the sum of salaries for all Men
+### Calculating the Sum of Salaries for Male Employees
 
-Well, we need a different way here, as this one is completely different from the rest of the methods,
+Since this method differs significantly from the previous ones, let's consider a different approach tailored to its distinct nature.
 
 ```java
 public static Function<Department, Stream<Employee>> 
@@ -359,10 +363,10 @@ private static Long findSumOfAllMenSalary(Company company) {
             .map(Employee::getSalary).mapToLong(Long::longValue).sum();
 }
 ```
-Well, we have used the functional components, and achieved a better reusable code, but still this can be cleaned up a bit.
+While we've successfully utilized functional components for better code reusability, there's room for further refinement and cleanup to enhance its readability and efficiency.
 
 ---
-You might have noticed that all these methods need a single value in return, not a list. And, we use optional and some logic to identify that single element. Can we extract that too, let’s try that now.
+Indeed, all these methods return a single value, not a list. We utilize Optional and certain logic to determine that singular element. Let's extract this commonality and streamline it to improve the code. Let's proceed with that approach now.
 ```java
 private static <T> T fetchParamsFromMap(Map<T, Long> param) {
     return param.entrySet().stream()
@@ -370,9 +374,9 @@ private static <T> T fetchParamsFromMap(Map<T, Long> param) {
             .map(Map.Entry::getKey).findFirst().orElse(null);
 }
 ```
-This method returns the key of biggest param in a map, using generics, this one can be applied to all of our methods
+This method, using generics, retrieves the key of the largest parameter in a map. It's a versatile function that can be applied across all of our methods.
 
-### Find out the most common employee name in the company
+### Finding the Most Common Employee Name in the Company
 ```java
 private static String findMostRepeatingNameInCompany(Company company) {
     Collector<Employee, ?, Map<String, Long>> repeatingNameCollector =
@@ -381,8 +385,8 @@ private static String findMostRepeatingNameInCompany(Company company) {
     return fetchParamsFromMap(nameAndCount);
 }
 ```
-that simple ? yes, it is
-### Find the highest salaried employee
+Sometimes, the simplest solutions are the most effective ones.
+### Locating the Employee with the Highest Salary
 ```java
 private static Employee findEmployeeWithHighestSalaryInTheCompany(Company company) {
     Collector<Employee, ?, Map<Employee, Long>> highSalary =
@@ -391,7 +395,7 @@ private static Employee findEmployeeWithHighestSalaryInTheCompany(Company compan
     return fetchParamsFromMap(employeeAndSalary);
 }
 ```
-### Find most popular grade/band in the company
+### Identifying the Most Popular Grade/Band in the Company
 ```java
 private static Band findMostPopularBandInCompany(Company company) {
     Collector<Employee, ?, Map<Band, Long>> popularBandCollector =
@@ -400,10 +404,10 @@ private static Band findMostPopularBandInCompany(Company company) {
     return fetchParamsFromMap(bandAndCount);
 }
 ```
-Done ? No, we are not done yet… there is a bit more to do.
+It seems there's more work left to do. Let's continue refining and enhancing the code to ensure it meets all the required criteria
 
 ---
-In the methods `findMostRepeatingNameInCompany`, `findEmployeeWithHighestSalaryInTheCompany` & `findMostPopularBandInCompany` there is still a repeating pattern, we use `processEmployeeToMap` and immediately we call `fetchParamsFromMap`. Let’s combine it.
+In the methods `findMostRepeatingNameInCompany` , `findEmployeeWithHighestSalaryInTheCompany`, and `findMostPopularBandInCompany`, there's a recurring pattern where we first utilize `processEmployeeToMap` and immediately follow it with `fetchParamsFromMap`. Let's consolidate these steps into a unified process for improved efficiency.
 
 ```java
 private static <T> T fetchBestOfMappedEmployees(Company company,
@@ -419,7 +423,7 @@ private static <T> T fetchBestOfMappedEmployees(Company company,
 
 Now, let’s see how our methods looks like,
 
-### Find out the most common employee name in the company
+### Finding the Most Common Employee Name in the Company
 
 ```java
 private static String findMostRepeatingNameInCompany(Company company) {
@@ -428,7 +432,7 @@ private static String findMostRepeatingNameInCompany(Company company) {
     return fetchBestOfMappedEmployees(company, repeatingNameCollector);
 }
 ```
-### Find the highest salaried employee
+### Locating the Employee with the Highest Salary
 ```java
 private static Employee findEmployeeWithHighestSalaryInTheCompany(Company company) {
     Collector<Employee, ?, Map<Employee, Long>> highSalary =
@@ -436,7 +440,7 @@ private static Employee findEmployeeWithHighestSalaryInTheCompany(Company compan
     return fetchBestOfMappedEmployees(company, highSalary);
 }
 ```
-### Find most popular grade/band in the company
+### Identifying the Most Popular Grade/Band in the Company
 ```java
 private static Band findMostPopularBandInCompany(Company company) {
     Collector<Employee, ?, Map<Band, Long>> popularBandCollector =
@@ -444,8 +448,5 @@ private static Band findMostPopularBandInCompany(Company company) {
     return fetchBestOfMappedEmployees(company, popularBandCollector);
 }
 ```
-We can even continue to simplify this, we can put the collectors outside and the parent calls can pass the collect and then we don’t really need this method calls itself.
 
-All code is available on github, and each separate iteration is in separate commit, please check this out at https://github.com/surajcm/java_fun_extraction_01/commits/master
-
-
+In our quest for simplification, we've discovered a method to externalize collectors and allow parent calls to pass collect, eliminating the need for method calls themselves. You can explore the step-by-step iterations of this process in separate commits on GitHub. Check out the code at https://github.com/surajcm/java_fun_extraction_01/commits/master for a detailed breakdown.
