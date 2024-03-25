@@ -2,8 +2,7 @@
 title: "Understanding Java Generics: An In-Depth Guide"
 description: "Discover the basics, advantages, and practical applications of generics in Java, simplifying your approach to writing efficient and reusable code."
 date: "2022-03-01"
-featured_image: "img/2022/01/programming.png"
-draft: "true"
+featured_image: "img/2022/03/generics_notes.png"
 ---
 ### Introduction: 
 

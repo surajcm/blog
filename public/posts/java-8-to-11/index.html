@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Smooth Sailing: A Practical Guide to Migrating from Java 8 to 11 | Explore my world</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Discover proven strategies, best practices, and practical tips for smoothly migrating your Java applications from version 8 to the latest long-term support release, Java 11.">
+    <meta name="generator" content="Hugo 0.124.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/blog/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Smooth Sailing: A Practical Guide to Migrating from Java 8 to 11" />
+<meta property="og:description" content="Discover proven strategies, best practices, and practical tips for smoothly migrating your Java applications from version 8 to the latest long-term support release, Java 11." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/blog/posts/java-8-to-11/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-16T00:00:00+00:00" />
+<meta itemprop="name" content="Smooth Sailing: A Practical Guide to Migrating from Java 8 to 11">
+<meta itemprop="description" content="Discover proven strategies, best practices, and practical tips for smoothly migrating your Java applications from version 8 to the latest long-term support release, Java 11."><meta itemprop="datePublished" content="2022-06-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-06-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="540">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Smooth Sailing: A Practical Guide to Migrating from Java 8 to 11"/>
+<meta name="twitter:description" content="Discover proven strategies, best practices, and practical tips for smoothly migrating your Java applications from version 8 to the latest long-term support release, Java 11."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('http://localhost:1313/blog/img/2022/01/programming.png');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/blog/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Explore my world
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="" title="Home page">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://surajcm.github.io/#about" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://surajcm.github.io/blog" title="Blog page">
+              Blog
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="categories" title="Categories page">
+              Categories
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://surajcm.github.io/#contact" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/blog/authors/" title="Authors page">
+              Authors
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/blog/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Smooth Sailing: A Practical Guide to Migrating from Java 8 to 11</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Discover proven strategies, best practices, and practical tips for smoothly migrating your Java applications from version 8 to the latest long-term support release, Java 11.
+            </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Smooth Sailing: A Practical Guide to Migrating from Java 8 to 11</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-06-16T00:00:00Z">June 16, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="introduction">Introduction</h2>
+<p>In today&rsquo;s rapidly evolving digital landscape, the security, stability, and performance of our software applications are paramount. As Java developers, it&rsquo;s imperative that we stay abreast of the latest advancements in the Java ecosystem to ensure our applications meet the highest standards of reliability and security.</p>
+<p>Java 11 represents a significant milestone in the evolution of the Java platform, offering a wealth of new features, enhancements, and improvements that go beyond mere syntax updates. At its core, Java 11 delivers robust security features, refined garbage collection mechanisms, and performance optimizations that collectively elevate the resilience and efficiency of Java applications.</p>
+<p>Security lies at the heart of Java 11&rsquo;s advancements, with a comprehensive suite of features designed to fortify applications against emerging threats and vulnerabilities. From enhanced TLS support to improved cryptographic algorithms, Java 11 provides developers with the tools they need to build secure, resilient applications in an increasingly hostile digital environment.</p>
+<p>Moreover, Java 11 introduces updates to the garbage collection (GC) algorithms, resulting in more efficient memory management and reduced latency. These GC enhancements not only enhance application performance but also contribute to a smoother and more predictable user experience, particularly for high-throughput, low-latency applications.</p>
+<p>In addition to security and performance improvements, Java 11 offers a host of productivity enhancements and language features that streamline development workflows and empower developers to write cleaner, more maintainable code. By migrating to Java 11, organizations can future-proof their applications, benefitting from a modern, stable platform that fosters innovation and agility.</p>
+<p>In this blog post, we&rsquo;ll explore the compelling reasons to upgrade to Java 11, providing actionable insights and practical guidance for a seamless migration experience. Join us as we unlock the power of Java 11 and embark on a journey towards building more secure, stable, and resilient Java applications.</p>
+<h2 id="understanding-the-java-11-release">Understanding the Java 11 Release</h2>
+<pre><code>Overview of the features and improvements introduced in Java 11.
+Explanation of the long-term support (LTS) model and the significance for migration.
+</code></pre>
+<h2 id="assessment-of-current-java-8-codebase">Assessment of Current Java 8 Codebase</h2>
+<pre><code>Evaluation of your existing Java 8 codebase.
+Identification of dependencies, libraries, and APIs used in the application.
+Assessment of potential compatibility issues and deprecated features.
+</code></pre>
+<h2 id="preparing-for-migration">Preparing for Migration</h2>
+<pre><code>Introduction to migration tools and utilities for Java 8 to 11 migration.
+Setting up a testing environment for migration.
+Creating a migration plan and timeline.
+</code></pre>
+<h2 id="addressing-compatibility-issues">Addressing Compatibility Issues</h2>
+<pre><code>Handling deprecated APIs and features.
+Updating third-party dependencies and libraries to Java 11 compatible versions.
+Resolving compatibility issues with specific Java 11 features.
+</code></pre>
+<h2 id="code-refactoring-and-modernization">Code Refactoring and Modernization</h2>
+<pre><code>Reviewing and refactoring code to leverage Java 11 features and enhancements.
+Modernizing code to adhere to Java 11 coding standards and best practices.
+Implementing performance optimizations and improvements.
+</code></pre>
+<h2 id="testing-and-quality-assurance">Testing and Quality Assurance</h2>
+<pre><code>Performing comprehensive testing of migrated code.
+Implementing unit tests, integration tests, and system tests.
+Conducting performance testing and benchmarking.
+</code></pre>
+<h2 id="deployment-and-rollout">Deployment and Rollout</h2>
+<pre><code>Strategies for deploying Java 11 applications in production environments.
+Considerations for gradual rollout and phased migration.
+Monitoring and troubleshooting post-migration issues.
+</code></pre>
+<h2 id="best-practices-and-recommendations">Best Practices and Recommendations</h2>
+<pre><code>Summary of best practices and recommendations for a successful Java 8 to 11 migration.
+Tips for maintaining code quality, performance, and scalability.
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<pre><code>Recap of key points discussed in the blog post.
+Encouragement to embrace the benefits of Java 11 and continue evolving with the Java ecosystem.</code></pre>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/blog/" >
+    &copy;  Explore my world 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
