@@ -2,7 +2,7 @@
 title: "Smooth Sailing: A Practical Guide to Migrating from Java 8 to 11"
 description: "Discover proven strategies, best practices, and practical tips for smoothly migrating your Java applications from version 8 to the latest long-term support release, Java 11."
 date: "2022-06-16"
-featured_image: "img/2022/01/programming.png"
+featured_image: "img/2022/06/8_to_11.png"
 draft: "true"
 ---
 ## Introduction
