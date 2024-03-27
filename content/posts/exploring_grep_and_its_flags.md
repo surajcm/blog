@@ -3,7 +3,6 @@ title: "Part 1: Mastering grep: Unleashing the Power of Text Search"
 description: "Unlock the potential of grep as we explore its flags, regex, and practical usage in searching text, making text searches a breeze."
 date: "2022-04-03"
 featured_image: "img/2022/04/grep_1.png"
-draft: "true"
 ---
 # Introduction to grep:
     
