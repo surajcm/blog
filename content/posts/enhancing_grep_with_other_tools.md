@@ -3,7 +3,6 @@ title: "Part 2: Beyond grep: Turbocharging Text Search with Command-Line Wizards
 description: "Discover the prowess of tr, sed, and awk as they join forces with grep, elevating your text processing skills to a whole new level."
 date: "2022-05-21"
 featured_image: "img/2022/05/grep_2.png"
-draft: "true"
 ---
 # Introduction to Other Tools:
 Let's get familiarized with a few tools that can augment and enhance grep's functionalities.
