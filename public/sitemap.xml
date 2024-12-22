@@ -12,11 +12,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/java-8-to-11/</loc>
-    <lastmod>2022-06-16T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>http://localhost:1313/blog/posts/enhancing_grep_with_other_tools/</loc>
     <lastmod>2022-05-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>

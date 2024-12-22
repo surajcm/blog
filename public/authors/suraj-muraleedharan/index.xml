@@ -4,7 +4,7 @@
     <title>Explore my world</title>
     <link>http://localhost:1313/blog/authors/suraj-muraleedharan/</link>
     <description>Recent content on Explore my world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/blog/authors/suraj-muraleedharan/index.xml" rel="self" type="application/rss+xml" />
   </channel>
