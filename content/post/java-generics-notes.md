@@ -1,9 +1,19 @@
 ---
 title: "Understanding Java Generics: An In-Depth Guide"
-description: "Discover the basics, advantages, and practical applications of generics in Java, simplifying your approach to writing efficient and reusable code."
 date: "2022-03-01"
-featured_image: "img/2022/03/generics_notes.png"
+description: "Discover the basics, advantages, and practical applications of generics in Java, simplifying your approach to writing efficient and reusable code."
+# menu: main
+featureImage: "img/2022/03/generics_notes.png"
+featureImageAlt: 'Generics guide'
+thumbnail: "img/2022/03/generics_notes.png"
+shareImage: "img/2022/03/generics_notes.png"
+categories:
+  - Technology
+tags:
+  - java
+  - generics
 ---
+
 ### Introduction: 
 
 In the realm of Java programming, ensuring type safety and crafting reusable code profoundly influence software reliability. Consider an `ArrayList` intended for integers but lacking generics; it permits various object types, leading to runtime errors when unintended types are retrieved. This absence of strict type checking often results in elusive errors, complicating code stability. However, Java's introduction of generics offers a solution, infusing type safety into classes and collections.

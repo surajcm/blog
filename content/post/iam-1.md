@@ -1,11 +1,19 @@
 ---
 title: "Introduction to AWS IAM: Users and Groups"
+date: "2022-05-22"
 description: "Discover the prowess of tr, sed, and awk as they join forces with grep, elevating your text processing skills to a whole new level."
-date: "2022-05-21"
-draft: "true"
-featured_image: "img/2022/05/grep_2.png"
+draft: true
+featureImage: "img/2022/05/grep_2.png"
+featureImageAlt: 'iam users and groups'
+thumbnail: "img/2022/05/grep_2.png"
+shareImage: "img/2022/05/grep_2.png"
+categories:
+  - Technology
+tags:
+  - aws
 ---
-Introduction to AWS IAM: Users and Groups
+
+# Introduction to AWS IAM: Users and Groups
 
 Identity and Access Management (IAM) is a fundamental service in AWS that allows you to manage access to your AWS resources securely. IAM is a global service, meaning it spans across all regions in your AWS account, ensuring a consistent access management experience wherever your resources are deployed.
 Understanding IAM Users

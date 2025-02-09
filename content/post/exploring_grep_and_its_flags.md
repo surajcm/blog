@@ -1,9 +1,18 @@
 ---
 title: "Part 1: Mastering grep: Unleashing the Power of Text Search"
-description: "Unlock the potential of grep as we explore its flags, regex, and practical usage in searching text, making text searches a breeze."
 date: "2022-04-03"
-featured_image: "img/2022/04/grep_1.png"
+description: "Unlock the potential of grep as we explore its flags, regex, and practical usage in searching text, making text searches a breeze."
+featureImage: "img/2022/04/grep_1.png"
+featureImageAlt: 'Exploring grep'
+thumbnail: "img/2022/04/grep_1.png"
+shareImage: "img/2022/04/grep_1.png"
+categories:
+  - Technology
+tags:
+  - linux
+  - shell
 ---
+
 # Introduction to grep:
     
 `grep` is a handy command-line tool that allows you to search for specific words or patterns within text files. Whether you're looking for a particular phrase in a document, hunting for errors in a log file, or even trying to find a specific line in a long list, grep can quickly pinpoint the information you need. It's like having a powerful search engine for your computer's files, helping you find needles in haystacks with ease.

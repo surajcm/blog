@@ -1,9 +1,19 @@
 ---
 title: "Hello world"
-description:  "Hello world to the blogging universe."
-date: 2021-12-16T11:21:40-11:00
-featured_image: "img/2021/12/hello.jpg"
+date: "2021-12-16"
+description: "Hello world to the blogging universe."
+featureImage: "img/2021/12/hello.jpg"
+featureImageAlt: 'Hello world'
+thumbnail: "img/2021/12/hello.jpg"
+shareImage: "img/2021/12/hello.jpg"
+categories:
+  - personal
+tags:
+  - personal
 ---
+
+
+
 Hello everyone, I am a software architect from India. I live in a beautiful coastal city named **Kochi** in south India.
 
 I work as a technical architect in ibs software, where I continue to spend 15+ years of my career. I am lucky to work with a few amazing individuals who share the same passion, and I love to call them my team.
