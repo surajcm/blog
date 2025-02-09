@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Explore my world</title><link>https://surajcm.github.io/blog/post/</link><description>Recent content in Posts on Explore my world</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 16 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://surajcm.github.io/blog/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Part 2: Beyond grep: Turbocharging Text Search with Command-Line Wizards</title><link>https://surajcm.github.io/blog/post/enhancing_grep_with_other_tools/</link><pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate><guid>https://surajcm.github.io/blog/post/enhancing_grep_with_other_tools/</guid><description>
+&lt;h1 id="introduction-to-other-tools">Introduction to Other Tools:&lt;/h1>
+&lt;p>Let's get familiarized with a few tools that can augment and enhance grep's functionalities.&lt;/p>
+&lt;h2 id="tr-character-transformation">tr: Character Transformation:&lt;/h2>
+&lt;p>&lt;code>tr&lt;/code> is a command-line utility used for translating or deleting characters in a text stream. It operates on a per-character basis, allowing you to replace or remove specific characters from input text. With its simple syntax and powerful functionality, &lt;code>tr&lt;/code> is commonly used for tasks such as character set conversion, text normalization, and line-ending conversion.&lt;/p></description></item><item><title>Part 1: Mastering grep: Unleashing the Power of Text Search</title><link>https://surajcm.github.io/blog/post/exploring_grep_and_its_flags/</link><pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate><guid>https://surajcm.github.io/blog/post/exploring_grep_and_its_flags/</guid><description>
+&lt;h1 id="introduction-to-grep">Introduction to grep:&lt;/h1>
+&lt;p>&lt;code>grep&lt;/code> is a handy command-line tool that allows you to search for specific words or patterns within text files. Whether you're looking for a particular phrase in a document, hunting for errors in a log file, or even trying to find a specific line in a long list, grep can quickly pinpoint the information you need. It's like having a powerful search engine for your computer's files, helping you find needles in haystacks with ease.&lt;/p></description></item><item><title>Understanding Java Generics: An In-Depth Guide</title><link>https://surajcm.github.io/blog/post/java-generics-notes/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://surajcm.github.io/blog/post/java-generics-notes/</guid><description>
+&lt;h3 id="introduction">Introduction:&lt;/h3>
+&lt;p>In the realm of Java programming, ensuring type safety and crafting reusable code profoundly influence software reliability. Consider an &lt;code>ArrayList&lt;/code> intended for integers but lacking generics; it permits various object types, leading to runtime errors when unintended types are retrieved. This absence of strict type checking often results in elusive errors, complicating code stability. However, Java's introduction of generics offers a solution, infusing type safety into classes and collections.&lt;/p></description></item><item><title>Refactoring Java 8 Code with Collector: A Practical Approach for Seamless Code Flow</title><link>https://surajcm.github.io/blog/post/refactoring-java8-code-with-collector/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://surajcm.github.io/blog/post/refactoring-java8-code-with-collector/</guid><description>
+&lt;p>In our quest for knowledge, let's begin by structuring our narrative with a clear and organized framework. Let's keep our vessel steady as we navigate through the intricate waters of Java 8 code refactoring.&lt;/p>
+&lt;p>As we progress, we will break down complex ideas into more digestible terms and provide vivid examples to illuminate the path.&lt;/p>
+&lt;h2 id="understanding-the-java-object-in-focus">Understanding the Java Object in Focus&lt;/h2>
+&lt;p>&lt;figure>
+&lt;picture>
+&lt;img
+loading="lazy"
+decoding="async"
+alt=""
+class="image_figure image_internal image_unprocessed"
+src="https://surajcm.github.io/blog/img/2022/01/java8-fun.png"
+/>
+&lt;/picture>
+&lt;/figure>
+&lt;/p>
+&lt;p>The code below aims to retrieve specific data from a Company object, which includes a list of employees. I aim to execute the following operations:&lt;/p></description></item><item><title>Hello world</title><link>https://surajcm.github.io/blog/post/hello-world/</link><pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate><guid>https://surajcm.github.io/blog/post/hello-world/</guid><description>
+&lt;p>Hello everyone, I am a software architect from India. I live in a beautiful coastal city named &lt;strong>Kochi&lt;/strong> in south India.&lt;/p>
+&lt;p>I work as a technical architect in ibs software, where I continue to spend 15+ years of my career. I am lucky to work with a few amazing individuals who share the same passion, and I love to call them my team.&lt;/p>
+&lt;p>During my work, I often come across a lot of things that feel like it might be really useful for everyone. There are a lot of stuff that make fee feel like it will really benefit others. My plan for this blog is to make it a platform for sharing things, may be code, may be designs, may be something else. The plan is to write for the people who are in the same line of work, coding and designing things.&lt;/p></description></item></channel></rss>

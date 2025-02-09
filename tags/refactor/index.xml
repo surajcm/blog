@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Refactor on Explore my world</title><link>https://surajcm.github.io/blog/tags/refactor/</link><description>Recent content in Refactor on Explore my world</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://surajcm.github.io/blog/tags/refactor/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring Java 8 Code with Collector: A Practical Approach for Seamless Code Flow</title><link>https://surajcm.github.io/blog/post/refactoring-java8-code-with-collector/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://surajcm.github.io/blog/post/refactoring-java8-code-with-collector/</guid><description>
+&lt;p>In our quest for knowledge, let's begin by structuring our narrative with a clear and organized framework. Let's keep our vessel steady as we navigate through the intricate waters of Java 8 code refactoring.&lt;/p>
+&lt;p>As we progress, we will break down complex ideas into more digestible terms and provide vivid examples to illuminate the path.&lt;/p>
+&lt;h2 id="understanding-the-java-object-in-focus">Understanding the Java Object in Focus&lt;/h2>
+&lt;p>&lt;figure>
+&lt;picture>
+&lt;img
+loading="lazy"
+decoding="async"
+alt=""
+class="image_figure image_internal image_unprocessed"
+src="https://surajcm.github.io/blog/img/2022/01/java8-fun.png"
+/>
+&lt;/picture>
+&lt;/figure>
+&lt;/p>
+&lt;p>The code below aims to retrieve specific data from a Company object, which includes a list of employees. I aim to execute the following operations:&lt;/p></description></item></channel></rss>
