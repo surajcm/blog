@@ -5,8 +5,8 @@ description: "Part 2: Beyond grep: Turbocharging Text Search with Command-Line W
 description: "Discover the prowess of tr, sed, and awk as they join forces with grep, elevating your text processing skills to a whole new level."
 featureImage: "img/2022/05/grep_2.png"
 featureImageAlt: 'beyond grep'
-thumbnail: "img/2022/05/grep_2.png"
-shareImage: "img/2022/05/grep_2.png"
+thumbnail: "img/2022/05/grep_2_thumb.png"
+shareImage: "img/2022/05/grep_2_thumb.png"
 categories:
   - Technology
 tags:

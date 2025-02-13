@@ -3,11 +3,12 @@ title: "Refactoring Java 8 Code with Collector: A Practical Approach for Seamles
 date: "2022-01-18"
 description: "Having served as a lead technical architect with extensive experience in the Java ecosystem, I've had the privilege of witnessing the transformative potential of effective code refactoring. Today, I extend a warm invitation to embark on a journey delving into the art of refactoring Java 8 code. We'll explore a pragmatic and systematic approach that assures you a smoother code flow, ultimately enhancing your development skills."
 featured: true
+toc: true 
 featureImage: "img/2022/01/programming.png"
 featureImageAlt: 'Lets refactor'
 thumbnail: "img/2022/01/programming.png"
 shareImage: "img/2022/01/programming.png"
-# codeMaxLines: 10 # Override global value for how many lines within a code block before auto-collapsing.
+codeMaxLines: 25
 # codeLineNumbers: false # Override global value for showing of line numbers within code block.
 categories:
   - Technology
@@ -25,13 +26,14 @@ As we progress, we will break down complex ideas into more digestible terms and 
 
 The code below aims to retrieve specific data from a Company object, which includes a list of employees. I aim to execute the following operations:
 
-    Identify the most frequently occurring name among employees.
-    Determine the employee with the highest salary in the company.
-    Calculate the total salary of all male employees.
-    Ascertain the most prevalent grade or band within the company.
+* Identify the most frequently occurring name among employees.
+* Determine the employee with the highest salary in the company.
+* Calculate the total salary of all male employees.
+* Ascertain the most prevalent grade or band within the company.
 
 Before the advent of Java 8, refactoring these logics and identifying commonalities was challenging. However, leveraging functional components simplifies the refactoring process significantly.
 ___
+
 ## Pre-Java8 version:
 
 Let's delve into the code to accomplish specific tasks:
@@ -120,9 +122,11 @@ private static Band findMostPopularBandInCompany(Company company) {
 }
 ```
 
-In each scenario, iterating through different departments and their respective employees is necessary. However, due to varying data formats and conditions, finding commonalities for effective refactoring becomes challenging. Let's explore how Java 8 addresses these complexities
+In each scenario, iterating through different departments and their respective employees is necessary. However, due to varying data formats and conditions, finding commonalities for effective refactoring becomes challenging. 
 
 ---
+
+## Let's explore how Java 8 addresses these complexities
 
 To commence, let's employ streams for data processing.
 
@@ -244,6 +248,8 @@ private static void addToBandAndCoutMap(Map<Band, Integer> bandAndCount, Employe
 We have identified some common elements, and there might be an opportunity to condense the code by refactoring these shared aspects. Let's proceed in that direction.
 
 ---
+## Java 8 - iteration 2
+
 This time, let's utilize the stream.collect() method across the board. Consequently, we'll focus on making changes only in two method calls: findMostRepeatingNameInCompany and findMostPopularBandInCompany.
 
 ### Finding the Most Common Employee Name in the Company
@@ -291,6 +297,8 @@ private static Band findMostPopularBandInCompany(Company company) {
 We've identified a recurring pattern, suggesting potential opportunities to extract functional components. Let's explore the feasibility of this approach.
 
 ---
+## Java 8 - iteration 3
+
 It seems like the methods findMostRepeatingNameInCompany, findEmployeeWithHighestSalaryInTheCompany, and findMostPopularBandInCompany share a similar pattern. The main difference lies in the type of map used and the collector employed. Let's create a method that can generate a generic map and accepts a collector as an argument.
 
 ```java
@@ -378,6 +386,8 @@ private static Long findSumOfAllMenSalary(Company company) {
 While we've successfully utilized functional components for better code reusability, there's room for further refinement and cleanup to enhance its readability and efficiency.
 
 ---
+## Java 8 - iteration 4
+
 Indeed, all these methods return a single value, not a list. We utilize Optional and certain logic to determine that singular element. Let's extract this commonality and streamline it to improve the code. Let's proceed with that approach now.
 ```java
 private static <T> T fetchParamsFromMap(Map<T, Long> param) {
@@ -419,6 +429,8 @@ private static Band findMostPopularBandInCompany(Company company) {
 It seems there's more work left to do. Let's continue refining and enhancing the code to ensure it meets all the required criteria
 
 ---
+## Java 8 - iteration 5
+
 In the methods `findMostRepeatingNameInCompany` , `findEmployeeWithHighestSalaryInTheCompany`, and `findMostPopularBandInCompany`, there's a recurring pattern where we first utilize `processEmployeeToMap` and immediately follow it with `fetchParamsFromMap`. Let's consolidate these steps into a unified process for improved efficiency.
 
 ```java
