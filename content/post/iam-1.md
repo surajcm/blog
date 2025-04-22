@@ -2,10 +2,10 @@
 title: "Introduction to AWS IAM: Users and Groups"
 date: "2022-05-22"
 description: "Discover the prowess of tr, sed, and awk as they join forces with grep, elevating your text processing skills to a whole new level."
-featureImage: "img/2022/05/grep_2.png"
+featureImage: "img/2022/05/iam.png"
 featureImageAlt: 'iam users and groups'
-thumbnail: "img/2022/05/grep_2.png"
-shareImage: "img/2022/05/grep_2.png"
+thumbnail: "img/2022/05/iam.png"
+shareImage: "img/2022/05/iam.png"
 categories:
   - Technology
 tags:

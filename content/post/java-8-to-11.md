@@ -4,10 +4,10 @@ date: "2022-06-16"
 description: "Discover proven strategies, best practices, and practical tips for smoothly migrating your Java applications from version 8 to the latest long-term support release, Java 11."
 featured: true 
 draft: true 
-featureImage: "img/2022/06/8_to_11.png"
+featureImage: "img/2022/06/sailing.png"
 featureImageAlt: 'Java 8 to 11'
-thumbnail: "img/2022/06/8_to_11.png"
-shareImage: "img/2022/06/8_to_11.png"
+thumbnail: "img/2022/06/sailing.png"
+shareImage: "img/2022/06/sailing.png"
 categories:
   - Technology
 tags:
