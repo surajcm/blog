@@ -2,10 +2,10 @@
 title: "Hello world"
 date: "2021-12-16"
 description: "Hello world to the blogging universe."
-featureImage: "img/2021/12/hello.jpg"
+featureImage: "img/2021/12/hello.png"
 featureImageAlt: 'Hello world'
-thumbnail: "img/2021/12/hello_thumb.jpg"
-shareImage: "img/2021/12/hello_thumb.jpg"
+thumbnail: "img/2021/12/hello.png"
+shareImage: "img/2021/12/hello.png"
 categories:
   - personal
 tags:

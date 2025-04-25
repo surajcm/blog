@@ -3,10 +3,10 @@ title: "Part 1: Mastering grep: Unleashing the Power of Text Search"
 date: "2022-04-03"
 description: "Unlock the potential of grep as we explore its flags, regex, and practical usage in searching text, making text searches a breeze."
 toc: true 
-featureImage: "img/2022/04/grep_1.png"
+featureImage: "img/2022/04/grep1.png"
 featureImageAlt: 'Exploring grep'
-thumbnail: "img/2022/04/grep_1_thumb.png"
-shareImage: "img/2022/04/grep_1_thumb.png"
+thumbnail: "img/2022/04/grep1.png"
+shareImage: "img/2022/04/grep1.png"
 categories:
   - Technology
 tags:

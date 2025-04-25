@@ -4,10 +4,10 @@ date: "2022-01-18"
 description: "Having served as a lead technical architect with extensive experience in the Java ecosystem, I've had the privilege of witnessing the transformative potential of effective code refactoring. Today, I extend a warm invitation to embark on a journey delving into the art of refactoring Java 8 code. We'll explore a pragmatic and systematic approach that assures you a smoother code flow, ultimately enhancing your development skills."
 featured: true
 toc: true 
-featureImage: "img/2022/01/programming.png"
+featureImage: "img/2022/01/refactoring.png"
 featureImageAlt: 'Lets refactor'
-thumbnail: "img/2022/01/programming.png"
-shareImage: "img/2022/01/programming.png"
+thumbnail: "img/2022/01/refactoring.png"
+shareImage: "img/2022/01/refactoring.png"
 codeMaxLines: 25
 # codeLineNumbers: false # Override global value for showing of line numbers within code block.
 categories:
